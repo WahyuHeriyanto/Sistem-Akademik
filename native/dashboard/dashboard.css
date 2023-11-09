@@ -1,0 +1,16 @@
+.navbar{
+  background-color: blue;
+}
+
+header{
+  background-color: rgb(222, 202, 20);
+  
+}
+
+.container{
+  background-color: rgb(237, 10, 10);
+  width: 80%;
+  margin: 90px auto;
+  text-align: center;
+
+}
