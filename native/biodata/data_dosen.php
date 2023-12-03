@@ -1,9 +1,3 @@
-<?php
-      require 'function_mahasiswa.php';
-      $mahasiswa = query("SELECT * FROM mahasiswa");
-?>
-
-
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
   <head>
@@ -11,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />    
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">   
     <link href="dashboard.css" rel="stylesheet">
   </head>
   <body>
@@ -26,7 +19,7 @@
 
     <span class="navbar-brand-right me-0 px-3 fs-6 text-white">
     <img class="user m-2"src="user.png" alt="..." style="width:35px;">  
-    Wahyu Heriyanto</span>
+    Sutrisno</span>
   </ul>
 </header>
 
@@ -39,45 +32,44 @@
 
             <li class="nav-item">
 
-              <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="../dashboard/dashboard.php" style="color:black;">
+            <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#" style="color:black;">
               <span class="material-symbols-outlined">house</span>
                 Dashboard
               </a>
             </li>
-
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="../biodata/data.php" style="color:black;">
+              <a class="nav-link d-flex align-items-center gap-2" href="../biodata/data_admin.php" style="color:black;">
               <span class="material-symbols-outlined">person</span>
                 Biodata
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#" style="color:black;">
+              <a class="nav-link d-flex align-items-center gap-2" href="../biodata/data.php" style="color:black;">
+              <span class="material-symbols-outlined">book_5</span>
+                Nilai
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="../biodata/data.php" style="color:black;">
               <span class="material-symbols-outlined">list</span>
-                Data Mahasiswa
+                Mahasiswa
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="../mahasiswa/datamahasiswa.php" style="color:black;">
+              <span class="material-symbols-outlined">book_5</span>
+                Bimbingan Akademik
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="../matkul/matkul.php" style="color:black;">
               <span class="material-symbols-outlined">book_5</span>
-                Mata Kuliah
+                Ujian Pendadaran
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="../krs/krs.php" style="color:black;">
-              <span class="material-symbols-outlined">edit</span>
-                KRS
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="../khs/index.php" style="color:black;">
-              <span class="material-symbols-outlined">picture_as_pdf</span>
-                KHS
-              </a>
-            </li>
-
-          <hr class="my-3">
 
           <ul class="nav flex-column mb-auto">
             <li class="nav-item">
@@ -97,48 +89,54 @@
       </div>
     </div>
 
-    <main class="content col-lg-10 ">
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2"></h1>
-        <div class="search mb-2 mb-md-0"> 
-        <form class="row g-2 mb-2 mb-md-0">
+<main class="content col-lg-10 ">
+
+<div class="foto m-4">
+  <img src="admin.png" alt="..." style="width:150px;">
+</div>
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 m-3">
+<h1 class="h2"></h1>
   <div class="col-auto">
-    <input type="text" class="form-control" placeholder="cari mahasiswa">
+    <button type="button" style="background-color:yellow;">Edit Biodata</button>
   </div>
-  <div class="col-auto">
-    <button type="submit" class="btn btn-primary mb-3">Cari</button>
-  </div>
-</form>
-        </div>
 
 </div>
 
 
+<h5>Data Diri</h5>
     <table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">No</th>
-      <th scope="col">Nama Mahasiswa</th>
-      <th scope="col">NIM</th>
-      <th scope="col">Dosen Pembimbing</th>
-      <th scope="col">Status</th>
-
-    </tr>
-  </thead>
   <tbody>
-    <?php $i =1; ?>
-    <?php foreach( $mahasiswa as $row) : ?>
     <tr>
-      <td><?= $i; ?></td>
-      <td><?= $row["nama_mahasiswa"]; ?> </td>
-      <td>I0<?= $row["nim"]; ?> </td>
-      <td><?= $row["nama_dosen"]; ?> </td>
-      <td><?= $row["status"]; ?> </td>
-
+      <td>Nama</td>
+      <td>Sutrisno S.T., M.Sc, Ph.D.</td>
     </tr>
-    <?php $i++; ?>
-    <?PHP endforeach; ?>
-
+    <tr>
+      
+      <td>Kode Dosen</td>
+        <td>SUT034</td>
+      </tr>
+    <tr>
+      
+    <td>NIP</td>
+      <td>198705062019031001</td>
+    </tr>
+    <tr>
+      <td>Tempat, Tanggal lahir</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Jenis Kelamin</td>
+      <td>Laki-Laki</td>
+    </tr>
+    <tr>
+      <td>Agama</td>
+      <td>Islam</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>Aktif</td>
+    </tr>
   </tbody>
 </table>
 

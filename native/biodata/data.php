@@ -52,7 +52,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#" style="color:black;">
+              <a class="nav-link d-flex align-items-center gap-2" href="../matkul/matkul.php" style="color:black;">
               <span class="material-symbols-outlined">book_5</span>
                 Mata Kuliah
               </a>
@@ -64,7 +64,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#" style="color:black;">
+              <a class="nav-link d-flex align-items-center gap-2" href="../khs/index.php" style="color:black;">
               <span class="material-symbols-outlined">picture_as_pdf</span>
                 KHS
               </a>
@@ -80,7 +80,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#" style="color:black;">
+              <a class="nav-link d-flex align-items-center gap-2" href="../index.php" style="color:black;">
               <span class="material-symbols-outlined">logout</span>
                 Sign out
               </a>

@@ -1,6 +1,6 @@
 <?php
       require 'function_mahasiswa.php';
-      $mahasiswa = query("SELECT * FROM krs");
+      $mahasiswa = query("SELECT * FROM khs");
 ?>
 
 
@@ -16,6 +16,8 @@
     <link href="dashboard.css" rel="stylesheet">
   </head>
   <body>
+
+
 
 
 
@@ -67,13 +69,13 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#" style="color:black;">
+              <a class="nav-link d-flex align-items-center gap-2" href="../krs/krs.php" style="color:black;">
               <span class="material-symbols-outlined">edit</span>
                 KRS
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="../khs/index.php" style="color:black;">
+              <a class="nav-link d-flex align-items-center gap-2" href="#" style="color:black;">
               <span class="material-symbols-outlined">picture_as_pdf</span>
                 KHS
               </a>
@@ -101,6 +103,13 @@
 
     <main class="content col-lg-10 ">
 
+    <center>
+      <div class="head m-4"></div>
+      <h1>KARTU HASIL STUDI</h1>
+
+    </center>
+
+
 
     <table class="table m-3">
   <thead>
@@ -124,17 +133,10 @@
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <div class="search mb-2 mb-md-0"> 
         <form class="row g-2 mb-2 mb-md-0">
-  <div class="col-auto">
-    <a href="ambil.php">
-    <button type="button" class="btn text-white" style="background-color:green;">
-  Ambil Mata Kuliah
-</button>
-    </a>
-  
-  </div>
+
   <div class="col-auto">
     <a href="cetak.php">
-    <button type="button" class="btn" style="background-color:green; color:white;">Cetak KRS</button>
+    <button type="button" class="btn" style="background-color:green; color:white;">Cetak KHS</button>
     </a>
   </div>
 </form>
@@ -150,12 +152,9 @@
       <th scope="col">Kode MK</th>
       <th scope="col">Nama MK</th>
       <th scope="col">SKS</th>
-      <th scope="col">Smt</th>
-      <th scope="col">Ruang</th>
-      <th scope="col">Hari</th>
-      <th scope="col">Jam Kuliah</th>
-      <th scope="col">Dosen</th>
-      <th scope="col">Aksi</th>
+      <th scope="col">nilai</th>
+      <th scope="col">jumlah</th>
+      <th scope="col">predikat</th>
 
     </tr>
   </thead>
@@ -167,18 +166,10 @@
       <td><?= $row["kode_mk"]; ?> </td>
       <td><?= $row["nama_mk"]; ?> </td>
       <td><?= $row["sks"]; ?> </td>
-      <td><?= $row["smt"]; ?> </td>
-      <td><?= $row["ruang"]; ?> </td>
-      <td><?= $row["hari"]; ?> </td>
-      <td><?= $row["jam"]; ?> </td>
-      <td><?= $row["dosen"]; ?> </td>
-      <td>
-      <a href="?kode= <?= $row["kode_mk"] ?>">
-        <button type="button" style="background-color:rgb(222, 20, 20);">
-          <span class="material-symbols-outlined">delete</span>      
-        </button>
-      </a>
-      </td>
+      <td><?= $row["nilai"]; ?> </td>
+      <td><?= $row["jml"]; ?> </td>
+      <td><?= $row["predikat"]; ?> </td>
+
     </tr>
     <?php $i++; ?>
     <?PHP endforeach; ?>
@@ -188,21 +179,6 @@
     </tr>
   </tbody>
 </table>
-
-<?php
-if(isset($_POST["[submit]"])) {
-  $kode_mk = $_POST["nrp"];
-  $nama_mk = $_POST["nrp"];
-  $sks = $_POST["nrp"];
-  $smt = $_POST["nrp"];
-  $ruang = $_POST["nrp"];
-  $hari = $_POST["nrp"];
-  $jam = $_POST["nrp"];
-  $dosen = $_POST["nrp"];
-
-
-}
-?>
 
 
     </main>

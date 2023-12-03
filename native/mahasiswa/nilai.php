@@ -1,6 +1,6 @@
 <?php
       require 'function_mahasiswa.php';
-      $mahasiswa = query("SELECT * FROM krs");
+      $mahasiswa = query("SELECT * FROM nilai");
 ?>
 
 
@@ -19,7 +19,6 @@
 
 
 
-
 <header class="navbar navbar-fixed-top bg-primary p-0 shadow">
   <a class="navbar-brand me-0 px-3 fs-6 text-white" href="#">
     <h3>Sistem Akademik</h3>
@@ -28,7 +27,7 @@
 
     <span class="navbar-brand-right me-0 px-3 fs-6 text-white">
     <img class="user m-2"src="user.png" alt="..." style="width:35px;">  
-    Wahyu Heriyanto</span>
+    Sutrisno</span>
   </ul>
 </header>
 
@@ -41,41 +40,42 @@
 
             <li class="nav-item">
 
-              <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="../dashboard/dashboard.php" style="color:black;">
+            <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#" style="color:black;">
               <span class="material-symbols-outlined">house</span>
                 Dashboard
               </a>
             </li>
-
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="../biodata/data.php" style="color:black;">
+              <a class="nav-link d-flex align-items-center gap-2" href="../biodata/data_admin.php" style="color:black;">
               <span class="material-symbols-outlined">person</span>
                 Biodata
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="../mahasiswa/datamahasiswa.php" style="color:black;">
+              <a class="nav-link d-flex align-items-center gap-2" href="../biodata/data.php" style="color:black;">
+              <span class="material-symbols-outlined">book_5</span>
+                Nilai
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="../biodata/data.php" style="color:black;">
               <span class="material-symbols-outlined">list</span>
-                Data Mahasiswa
+                Mahasiswa
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="../mahasiswa/datamahasiswa.php" style="color:black;">
+              <span class="material-symbols-outlined">book_5</span>
+                Bimbingan Akademik
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="../matkul/matkul.php" style="color:black;">
               <span class="material-symbols-outlined">book_5</span>
-                Mata Kuliah
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#" style="color:black;">
-              <span class="material-symbols-outlined">edit</span>
-                KRS
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="../khs/index.php" style="color:black;">
-              <span class="material-symbols-outlined">picture_as_pdf</span>
-                KHS
+                Ujian Pendadaran
               </a>
             </li>
 
@@ -101,61 +101,29 @@
 
     <main class="content col-lg-10 ">
 
+ 
+      <div class="head m-2 bg-primary " style=" color:white; height:30px">
+          <div class="intext m-2">        <h6>Daftar Mata Kuliah</h6></div>
 
-    <table class="table m-3">
-  <thead>
-    <tr>
-      <th scope="col">NIM</th>
-      <th scope="col">I0721077</th>
-      <th scope="col">Pembimbing Akademik</th>
-      <th scope="col">IRWAN IFTADI</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-    <th scope="col">Nama</th>
-      <th scope="col">WAHYU HERIYANTO</th>
-      <th scope="col">Status Mahasiswa</th>
-      <th scope="col">Aktif</th>
-    </tr>
-  </tbody>
-</table>
 
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <div class="search mb-2 mb-md-0"> 
-        <form class="row g-2 mb-2 mb-md-0">
-  <div class="col-auto">
-    <a href="ambil.php">
-    <button type="button" class="btn text-white" style="background-color:green;">
-  Ambil Mata Kuliah
-</button>
-    </a>
+
+      </div>
+
+
+
   
-  </div>
-  <div class="col-auto">
-    <a href="cetak.php">
-    <button type="button" class="btn" style="background-color:green; color:white;">Cetak KRS</button>
-    </a>
-  </div>
-</form>
-        </div>
 
-</div>
-
-
+    <h1></h1>
     <table class="table table-bordered">
   <thead>
     <tr>
       <th scope="col">No</th>
       <th scope="col">Kode MK</th>
       <th scope="col">Nama MK</th>
+      <th scope="col">Prodi</th>
       <th scope="col">SKS</th>
-      <th scope="col">Smt</th>
-      <th scope="col">Ruang</th>
-      <th scope="col">Hari</th>
-      <th scope="col">Jam Kuliah</th>
-      <th scope="col">Dosen</th>
-      <th scope="col">Aksi</th>
+      <th scope="col">Kelas</th>
+      <th scope="col">Aksi</th> 
 
     </tr>
   </thead>
@@ -166,18 +134,27 @@
       <td><?= $i; ?></td>
       <td><?= $row["kode_mk"]; ?> </td>
       <td><?= $row["nama_mk"]; ?> </td>
+      <td>Teknik Elektro</td>
       <td><?= $row["sks"]; ?> </td>
-      <td><?= $row["smt"]; ?> </td>
-      <td><?= $row["ruang"]; ?> </td>
-      <td><?= $row["hari"]; ?> </td>
-      <td><?= $row["jam"]; ?> </td>
-      <td><?= $row["dosen"]; ?> </td>
       <td>
-      <a href="?kode= <?= $row["kode_mk"] ?>">
-        <button type="button" style="background-color:rgb(222, 20, 20);">
-          <span class="material-symbols-outlined">delete</span>      
+      <a href="#">
+        <button type="button" style="background-color:green;">A   
         </button>
-      </a>
+      </a> 
+      <a href="#">
+        <button type="button" style="background-color:green;">B
+        </button>
+      </a> 
+
+      </td>
+
+      <td>
+      <a href="#">
+        <button type="button" style="background-color:green;">
+          <span class="material-symbols-outlined"style="color:white">login</span>      
+        </button>
+      </a> 
+
       </td>
     </tr>
     <?php $i++; ?>
@@ -188,23 +165,23 @@
     </tr>
   </tbody>
 </table>
-
-<?php
-if(isset($_POST["[submit]"])) {
-  $kode_mk = $_POST["nrp"];
-  $nama_mk = $_POST["nrp"];
-  $sks = $_POST["nrp"];
-  $smt = $_POST["nrp"];
-  $ruang = $_POST["nrp"];
-  $hari = $_POST["nrp"];
-  $jam = $_POST["nrp"];
-  $dosen = $_POST["nrp"];
-
-
-}
-?>
-
-
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
     </main>
   </div>
 </div>

@@ -6,8 +6,8 @@
 <body>
  
 	<center>
-        <h2>KARTU RENCANA STUDI</h2>
-		<h2>(KRS)</h2>
+        <h2>KARTU HASIL STUDI</h2>
+		<h2>(KHS)</h2>
  
 	</center>
 
@@ -31,7 +31,8 @@
 </table>
 
 <h1></h1>
- 
+
+
 	<table border="1" style="width: 100%">
 		<tr>
 			<th width="1%">No</th>
@@ -39,6 +40,9 @@
 			<th>Mata Kuliah</th>
 			<th>Kelas</th>
 			<th width="5%">SKS</th>
+			<th>Nilai</th>
+			<th>Jumlah</th>
+			<th>Predikat</th>
 		</tr>
         <tr>
       <td>1</td>
@@ -46,15 +50,20 @@
       <td>JARINGAN KOMUNIKASI DATA</td>
       <td>B</td>
       <td>2</td>
+	  <td>4.0</td>
+	  <td>8.0</td>
+	  <td>A</td>
+		</tr>
 
-
-	  <tr>
+		<tr>
       <td>2</td>
       <td>EE3505-19</td>
       <td>SISTEM INFORMASI</td>
       <td>B</td>
       <td>2</td>
-
+	  <td>4.0</td>
+	  <td>8.0</td>
+	  <td>A</td>
 		</tr>
 
 		<tr>
@@ -63,13 +72,16 @@
       <td>SISTEM TERTANAM DAN PERIFERAL</td>
       <td>B</td>
       <td>3</td>
-
+	  <td>3.7</td>
+	  <td>11.1</td>
+	  <td>A-</td>
 		</tr>
 
 	
 	</table>
 
-	<p>Total SKS diambil : 7 SKS</p>
+	<p>Total SKS diperoleh : 7 SKS</p>
+	<p>Indeks Prestasi Kumulatif : 3.87</p>
  
 	<script>
 		window.print();

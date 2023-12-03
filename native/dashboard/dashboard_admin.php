@@ -19,7 +19,7 @@
 
     <span class="navbar-brand-right me-0 px-3 fs-6 text-white">
     <img class="user m-2"src="user.png" alt="..." style="width:35px;">  
-    Wahyu Heriyanto</span>
+    Admin</span>
   </ul>
 </header>
 
@@ -32,43 +32,44 @@
 
             <li class="nav-item">
 
-              <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="../dashboard/dashboard.php" style="color:black;">
+              <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#" style="color:black;">
               <span class="material-symbols-outlined">house</span>
                 Dashboard
               </a>
             </li>
-
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="../biodata/data.php" style="color:black;">
+              <a class="nav-link d-flex align-items-center gap-2" href="../biodata/data_admin.php" style="color:black;">
               <span class="material-symbols-outlined">person</span>
-                Biodata
+                Admin
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="../mahasiswa/datamahasiswa.php" style="color:black;">
-              <span class="material-symbols-outlined">list</span>
+              <a class="nav-link d-flex align-items-center gap-2" href="../dosen/datadosen.php" style="color:black;">
+              <span class="material-symbols-outlined">person</span>
+                Data Dosen
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="../mahasiswa/datamahasiswa_admin.php" style="color:black;">
+              <span class="material-symbols-outlined">person</span>
                 Data Mahasiswa
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="../matkul/matkul.php" style="color:black;">
+              <a class="nav-link d-flex align-items-center gap-2" href="../matkul/matkul_admin.php" style="color:black;">
               <span class="material-symbols-outlined">book_5</span>
                 Mata Kuliah
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="../krs/krs.php" style="color:black;">
+              <a class="nav-link d-flex align-items-center gap-2" href="../berita/laporan.php" style="color:black;">
               <span class="material-symbols-outlined">edit</span>
-                KRS
+                Berita Acara
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="../khs/index.php" style="color:black;">
-              <span class="material-symbols-outlined">picture_as_pdf</span>
-                KHS
-              </a>
-            </li>
+
 
           <hr class="my-3">
 
@@ -93,7 +94,7 @@
 
 <main class="content col-lg-10 ">
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1>Selamat Datang, Wahyu Heriyanto</h1>
+    <h1>Selamat Datang, Admin</h1>
   </div>
 
   <center>
