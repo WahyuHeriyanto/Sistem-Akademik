@@ -14,5 +14,30 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/index');
 });
+
+Route::get('/user/dashboard', function () {
+    return view('/user/dashboard');
+});
+
+Route::get('/user/data', function () {
+    return view('/user/data');
+});
+
+Route::get('/user/datamahasiswa', function () {
+    return view('/user/datamahasiswa');
+});
+
+Route::get('/user/matkul', function () {
+    return view('/user/matkul');
+});
+
+Route::get('/user/krs', function () {
+    return view('/user/krs');
+});
+
+Route::get('/user/khs', function () {
+    return view('/user/khs');
+});
+
